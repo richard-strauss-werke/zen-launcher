@@ -18,7 +18,7 @@ In order to install the extension, double click on the `xpi` file in the `build`
 Usage
 -----
 
-For an example of a web page firing an event caught by the extension, see `demo/tests.html`. Configure the extension in Firefox by selecting `Tools` `Plug-ins` `Extensions` `zenLauncher`.
+For an example of a web page firing an event caught by the extension, see `demo/demo.html`. Configure the extension in Firefox by selecting `Tools` `Plug-ins` `Extensions` `zenLauncher`.
 
 Compatibility
 -------------
