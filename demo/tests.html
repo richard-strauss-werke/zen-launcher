@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>zenLauncher demo page</title>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+		<style type="text/css"></style>
+
+		<script type="text/javascript">
+			var Zen = {};
+			Zen.app = {};
+
+			function fire(documentPath) {
+				var evt = document.createEvent('Events');
+				evt.initEvent('runlocaloxygen', true, false);
+				Zen.app.oxyLoadQueue = documentPath;
+				window.dispatchEvent(evt);
+			};
+		</script>
+
+	</head>
+	<body>
+		<h3>zenLauncher demo page</h3>
+		<br/>
+		<p>
+			Press the button to fire an event: <button onclick="fire('/db/document1.xml')">fire('/db/document1.xml')</button>.
+		</p>
+	</body>
+</html>

@@ -1,0 +1,4 @@
+content   zenlauncher                 chrome/content/
+overlay   chrome://browser/content/browser.xul   chrome://zenlauncher/content/ff-overlay.xul
+locale zenlauncher en-US chrome/locale/en-US/
+locale zenlauncher de-DE chrome/locale/en-US/

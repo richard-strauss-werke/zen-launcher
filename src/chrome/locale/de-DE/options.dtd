@@ -1,0 +1,12 @@
+<!ENTITY options_event_title "Event">
+<!ENTITY options_event_desc "Der Name des auslösenden Events.">
+<!ENTITY options_programPath_title "Programmpfad">
+<!ENTITY options_programPath_desc "Der Pfad des auszuführenden Programms.">
+<!ENTITY options_parameterVariable_title "Parameter-Variable">
+<!ENTITY options_parameterVariable_desc "Die Variable im DOM, von der der erste Programm-Parameter gelesen werden soll.">
+<!ENTITY options_parameterRegex_title "Parameter-Regex">
+<!ENTITY options_parameterRegex_desc "Ein regulärer Ausdruck, der auf die Parameter-Variable zutreffen muss.">
+<!ENTITY options_parameterPrefix_title "Parameter-Präfix">
+<!ENTITY options_parameterPrefix_desc "Der Präfix, der dem ersten Programmparameter vorangestellt wird.">
+<!ENTITY options_parameterSuffix_title "Parameter-Suffix">
+<!ENTITY options_parameterSuffix_desc "Der Suffix, der an den ersten Programmparameter angehängt wird.">

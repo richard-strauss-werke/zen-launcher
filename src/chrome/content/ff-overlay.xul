@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<overlay id="zenlauncher-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script src="ff-overlay.js"/>
+  
+	<stringbundleset id="stringbundleset">
+		<stringbundle id="zen-string-bundle" src="chrome://zenlauncher/locale/zenlauncher.properties"/>
+	</stringbundleset>
+</overlay>

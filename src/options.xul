@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE options SYSTEM "chrome://zenlauncher/locale/options.dtd">
+
+<vbox xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <setting pref="extensions.zenlauncher.event" type="string" title="&options_event_title;" desc="&options_event_desc;"/>
+  <setting pref="extensions.zenlauncher.programPath" type="string" title="&options_programPath_title;" desc="&options_programPath_desc;"/>
+  <setting pref="extensions.zenlauncher.parameterVariable" type="string" title="&options_parameterVariable_title;" desc="&options_parameterVariable_desc;"/>
+  <setting pref="extensions.zenlauncher.parameterRegex" type="string" title="&options_parameterRegex_title;" desc="&options_parameterRegex_desc;"/>
+  <setting pref="extensions.zenlauncher.parameterPrefix" type="string" title="&options_parameterPrefix_title;" desc="&options_parameterPrefix_desc;"/>
+  <setting pref="extensions.zenlauncher.parameterSuffix" type="string" title="&options_parameterSuffix_title;" desc="&options_parameterSuffix_desc;"/>
+</vbox>

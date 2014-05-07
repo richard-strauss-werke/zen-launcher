@@ -1,0 +1,12 @@
+<!ENTITY options_event_title "Event">
+<!ENTITY options_event_desc "The name of the triggering event.">
+<!ENTITY options_programPath_title "Program Path">
+<!ENTITY options_programPath_desc "The path of the program to launch.">
+<!ENTITY options_parameterVariable_title "Parameter Variable">
+<!ENTITY options_parameterVariable_desc "The variable in the DOM to read the first parameter from.">
+<!ENTITY options_parameterRegex_title "Parameter Regex">
+<!ENTITY options_parameterRegex_desc "A regex the parameter read from the DOM is required to match.">
+<!ENTITY options_parameterPrefix_title "Parameter Prefix">
+<!ENTITY options_parameterPrefix_desc "The prefix to be added to the first parameter passed to the program.">
+<!ENTITY options_parameterSuffix_title "Parameter Suffix">
+<!ENTITY options_parameterSuffix_desc "The suffix to be added to the first parameter passed to the program.">
