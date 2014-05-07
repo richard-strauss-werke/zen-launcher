@@ -12,8 +12,15 @@
 
 			function fire(documentPath) {
 				var evt = document.createEvent('Events');
-				evt.initEvent('runlocaloxygen', true, false);
+				
+				// the default event name is "runlocaloxygen", see extension preferences, "Event Name":
+				var eventName = 'runlocaloxygen';
+				
+				evt.initEvent(eventName, true, false);
+				
+				// the first application parameter is located by default at Zen.app.oxyLoadQueue, see extension preferences, "Parameter Variable":
 				Zen.app.oxyLoadQueue = documentPath;
+				
 				window.dispatchEvent(evt);
 			};
 		</script>
@@ -22,8 +29,13 @@
 	<body>
 		<h3>zenLauncher demo page</h3>
 		<br/>
+		<h2>valid</h2>
 		<p>
 			Press the button to fire an event: <button onclick="fire('/db/document1.xml')">fire('/db/document1.xml')</button>.
+		</p>
+		<h2>invalid</h2>
+		<p>
+			Press the button to fire an event: <button onclick="fire('../db/document1.xml')">fire('../db/document1.xml')</button>.
 		</p>
 	</body>
 </html>
