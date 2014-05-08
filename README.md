@@ -23,7 +23,7 @@ Configure the extension in Firefox by selecting `Tools` `Plug-ins` `Extensions` 
 - `Event Name` the name of the event. You can choose any name, but it is required that the event name matches the name of the event fired from the JavaScript on the web page. Defaults to  `runlocaloxygen`.
 - `Program Path` the path to the application you want to launch from the web page. Defaults to `C:\\Program files\\Oxygen XML Editor 15\\oxygen15.0.exe`. Change this according to your system; on Ubuntu, the path might be `/home/myusername/Oxygen XML Editor 15/oxygen15.0`.
 - `Parameter Variable` the variable on the web page from which the extension reads the parameter passed to the application. This value is required to be a String. Like with the event name, you are free to choose your own location. Defaults to `Zen.app.oxyLoadQueue`.
-- `Parameter Regex` the regular expression the parameter variable is tested against. Defaults to `^\/db\/(\w|\.(?!\.)|\/)+$`. Matching the whole string by starting with ^ and ending with $ is recommended. Defaults to `^\/db\/(\w|\.(?!\.)|\/)+$`.
+- `Parameter Regex` the regular expression the parameter variable is tested against. Matching the whole string by starting with ^ and ending with $ is recommended. Defaults to `^\/db\/(\w|\.(?!\.)|\/)+$`.
 - `Parameter Prefix` a string to be added to the beginning of each parameter variable read from the web page. Defaults to `oxygen:/exist-zen$zen`. 
 - `Parameter Suffix` a string to be added to the end of each parameter variable read from the web page. Defaults to an empty string.
 
