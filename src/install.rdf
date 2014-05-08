@@ -8,6 +8,7 @@
     <em:version>0.5.7</em:version>
     <em:description>Launches a local program from Firefox.</em:description>
     <em:creator>Alexander Erhard</em:creator>
+    <em:homepageURL>https://github.com/aerhard/zen-launcher</em:homepageURL>
     
     <em:localized>
       <Description>
