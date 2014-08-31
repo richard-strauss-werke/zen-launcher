@@ -31,4 +31,4 @@ For an example of a web page firing an event caught by the extension, see `demo/
 
 Compatibility
 -------------
-Tested with Firefox 32.0 in Windows 7 and Ubuntu 12.4 LTS
+Tested with Firefox 28.0 in Windows 7 and Ubuntu 12.4 LTS
