@@ -7,6 +7,6 @@
 <!ENTITY options_parameterRegex_title "Parameter-Regex">
 <!ENTITY options_parameterRegex_desc "Ein regulärer Ausdruck, der auf die Parameter-Variable zutreffen muss.">
 <!ENTITY options_parameterPrefix_title "Parameter-Präfix">
-<!ENTITY options_parameterPrefix_desc "Der Präfix, der dem ersten Programmparameter vorangestellt wird.">
+<!ENTITY options_parameterPrefix_desc "Das Präfix, das dem ersten Programmparameter vorangestellt wird.">
 <!ENTITY options_parameterSuffix_title "Parameter-Suffix">
-<!ENTITY options_parameterSuffix_desc "Der Suffix, der an den ersten Programmparameter angehängt wird.">
+<!ENTITY options_parameterSuffix_desc "Das Suffix, das an den ersten Programmparameter angehängt wird.">

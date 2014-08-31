@@ -6,14 +6,15 @@
     <em:type>2</em:type>
     <em:name>zenLauncher</em:name>
     <em:version>0.5.7</em:version>
-    <em:description>Launches a local program from Firefox.</em:description>
+    <em:description>Launches a locally installed program from Firefox.</em:description>
     <em:creator>Alexander Erhard</em:creator>
     <em:homepageURL>https://github.com/aerhard/zen-launcher</em:homepageURL>
     
     <em:localized>
       <Description>
         <em:locale>de-DE</em:locale>
-        <em:description>Startet ein lokales Programm von Firefox aus.</em:description>        
+        <em:name>zenLauncher</em:name>
+        <em:description>Startet ein lokal installiertes Programm von Firefox aus.</em:description>
       </Description>
     </em:localized>
        
