@@ -1,10 +1,10 @@
-
-(function() {
+(function () {
 
   var launcherExtension = {
 
-    init : function() {
-      this.prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.zenlauncher.");
+    init : function () {
+      this.prefs =
+      Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.zenlauncher.");
       this.prefs.QueryInterface(Components.interfaces.nsIPrefBranch);
       this.prefs.addObserver("", this, false);
 
@@ -22,11 +22,11 @@
       this.addEventListener();
     },
 
-    observe : function(subject, topic, data) {
+    observe : function (subject, topic, data) {
       if (topic != "nsPref:changed") {
         return;
       }
-      switch(data) {
+      switch (data) {
         case "event":
           this.removeEventListener();
           this.config.event = this.prefs.getCharPref("event");
@@ -38,7 +38,7 @@
         case 'parameterPrefix':
           this.config.parameterPrefix = this.prefs.getCharPref("parameterPrefix");
           break;
-          case 'parameterSuffix':
+        case 'parameterSuffix':
           this.config.parameterSuffix = this.prefs.getCharPref("parameterSuffix");
           break;
         case 'parameterVariable':
@@ -50,7 +50,7 @@
       }
     },
 
-    createRegex : function() {
+    createRegex : function () {
       try {
         return new RegExp(this.prefs.getCharPref("parameterRegex"));
       } catch (e) {
@@ -58,7 +58,7 @@
       }
     },
 
-    getParameters : function() {
+    getParameters : function () {
       var tokens, path, i, regexTest;
       if (this.config.parameterVariable === '') {
         return [this.config.parameterPrefix + this.config.parameterSuffix];
@@ -66,15 +66,15 @@
       tokens = this.config.parameterVariable.split('.');
       //.Zen.app.oxyLoadQueue
       path = window.top.getBrowser().selectedBrowser.contentWindow.wrappedJSObject;
-      for ( i = 0; i < tokens.length; i += 1) {
+      for (i = 0; i < tokens.length; i += 1) {
         path = path[tokens[i]];
-        if ( typeof path === 'undefined') {
+        if (typeof path === 'undefined') {
           throw {
             name : 'pathnotfounderror'
           }
         }
       }
-      if ( typeof path !== 'string') {
+      if (typeof path !== 'string') {
         throw {
           name : 'nostringerror'
         }
@@ -86,13 +86,14 @@
       }
       if (!regexTest) {
         throw {
-          name : 'regexerror'
+          name : 'regexerror',
+          value : path
         }
       }
       return [this.config.parameterPrefix + path + this.config.parameterSuffix];
     },
 
-    onEventFired : function(evt) {
+    onEventFired : function (evt) {
       var parameters, program, process;
       try {
         parameters = this.getParameters();
@@ -101,23 +102,28 @@
         process = Components.classes["@mozilla.org/process/util;1"].createInstance(Components.interfaces.nsIProcess);
         process.init(program);
         process.run(false, parameters, parameters.length);
-      } catch(e) {
+      } catch (e) {
         var errorString, stringsBundle = document.getElementById("zen-string-bundle");
-        if (e.name === 'pathnotfounderror' || e.name === 'nostringerror' || e.name === 'regexerror') {
+        if (e.name === 'pathnotfounderror' || e.name === 'nostringerror') {
           errorString = stringsBundle.getFormattedString(e.name, [this.config.parameterVariable]);
+        } else if (e.name === 'regexerror') {
+          errorString = stringsBundle.getFormattedString(e.name, [e.value]);
         } else {
-          errorString = stringsBundle.getFormattedString('launchError', [this.config.programPath, parameters.join(', ')]);
+          errorString = stringsBundle.getFormattedString('launchError', [
+            this.config.programPath,
+            parameters.join(', ')
+          ]);
         }
         window.alert(errorString);
       }
     },
-    
-    addEventListener : function() {
+
+    addEventListener : function () {
       var me = this;
       document.addEventListener(me.config.event, me.listener, false, true);
     },
-    
-    removeEventListener : function() {
+
+    removeEventListener : function () {
       var me = this;
       document.removeEventListener(me.config.event, me.listener, false);
     }

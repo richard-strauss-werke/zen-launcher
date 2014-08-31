@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<title>zenLauncher demo page</title>
+		<title>zenLauncher test page</title>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-
+		
 		<style type="text/css"></style>
-
+		
 		<script type="text/javascript">
 			var Zen = {};
 			Zen.app = {};
@@ -24,18 +24,21 @@
 				window.dispatchEvent(evt);
 			};
 		</script>
-
+		
 	</head>
 	<body>
-		<h3>zenLauncher demo page</h3>
+		<h1>zenLauncher test page</h1>
 		<br/>
-		<h2>valid</h2>
-		<p>
-			Press the button to fire an event: <button onclick="fire('/db/document1.xml')">fire('/db/document1.xml')</button>.
+		<p>(should pass a file path to the program specified in the add-on options (oXygen in this case): <button onclick="fire('/db/document1.xml')">Click</button>.
 		</p>
-		<h2>invalid</h2>
 		<p>
-			Press the button to fire an event: <button onclick="fire('../db/document1.xml')">fire('../db/document1.xml')</button>.
+			(should throw a type error): <button onclick="fire([1, 2, 3])">Click</button>.
+		</p>
+		<p>
+			(should throw a regex error): <button onclick="fire('../db/document1.xml')">Click</button>.
+		</p>
+		<p>
+			(should throw a path-not-found error): <button onclick="fire(undefined)">Click</button>.
 		</p>
 	</body>
 </html>

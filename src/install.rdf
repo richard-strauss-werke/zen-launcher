@@ -5,7 +5,7 @@
     <em:id>zenlauncher@rsga.de</em:id>
     <em:type>2</em:type>
     <em:name>zenLauncher</em:name>
-    <em:version>0.5.7</em:version>
+    <em:version>0.5.8</em:version>
     <em:description>Launches a locally installed program from Firefox.</em:description>
     <em:creator>Alexander Erhard</em:creator>
     <em:homepageURL>https://github.com/aerhard/zen-launcher</em:homepageURL>
